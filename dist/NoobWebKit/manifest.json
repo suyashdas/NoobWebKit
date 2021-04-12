@@ -1,0 +1,21 @@
+{
+	"short_name": "Website Name",
+	"name": "Website Name",
+	"lang": "en",
+	"description": "Website Description",
+	"start_url": "/",
+	"background_color": "#ffffff",
+	"theme_color": "transparent",
+	"dir": "ltr",
+	"display": "standalone",
+	"orientation": "portrait",
+	"icons": [
+		{
+			"src": "/favicon.png",
+			"type": "image/png"
+		}
+		
+	],	
+
+	"prefer_related_applications": "false"
+}

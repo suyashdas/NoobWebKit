@@ -1,0 +1,24 @@
+// opacity 0 to 1 blink effect 
+@keyframes blink{
+    from { opacity: 0.1; }  
+    to { opacity: 1; }   }
+
+// rotate 0 to 360 
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+     }  
+
+.loader {
+  margin: auto;
+  border: 1.1rem solid rgb(128,128,128,0.2);
+  border-top-color: black;
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  animation: spin 1s linear infinite;
+}
+
+.blink {
+  animation: blink 2s alternate-reverse infinite;
+}

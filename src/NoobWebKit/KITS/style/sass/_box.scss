@@ -1,0 +1,30 @@
+.box{
+   display: flex;
+   flex-direction: row; 
+   padding: 0;
+}
+
+// margin left
+.gap-10 { margin-left: 10%; }
+.gap-20 { margin-left: 20%; }
+.gap-25 { margin-left: 25%;}
+.gap-33, .gap-34 { margin-left: 33.3333%; }
+.gap-40 { margin-left: 40%;}
+.gap-50 { margin-left: 50%; }
+.gap-60 { margin-left: 60%; }
+.gap-66, .gap-67 { margin-left: 66.6666%; }
+.gap-75 { margin-left: 75%; }
+.gap-80 { margin-left: 80%; }
+.gap-90 { margin-left: 90%; }
+
+// width
+.w10{ width: 10%;}
+.w20{ width: 20%;}
+.w30{ width: 30%;}
+.w40{ width: 40%;}
+.w50{ width: 50%;}
+.w60{ width: 60%;}
+.w70{ width: 70%;}
+.w80{ width: 80%;}
+.w90{ width: 90%;}
+.w100{ width: 100%;}

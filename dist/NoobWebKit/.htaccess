@@ -1,0 +1,24 @@
+# Run Php without filename extension
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+#remove .php or .html
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+#Prevent directory listings
+Options All -Indexes
+
+#Prevent viewing of .htaccess file
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+
+# errors 
+errorDocument 400 /error
+errorDocument 401 /error
+errorDocument 403 /error
+errorDocument 404 /error
+errorDocument 500 /error

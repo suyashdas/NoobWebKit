@@ -1,0 +1,41 @@
+*,
+*:after,
+*:before {
+   margin:0; 
+   padding:0; 
+   box-sizing:border-box; 
+   overflow-wrap: break-word; 
+ }
+
+html{
+  box-sizing: border-box;
+  font-size:62.5%; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  color: #606c76;
+  font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-size: 1.6em;
+  font-weight: 300;
+  letter-spacing: .01em;
+  line-height: 1.6;
+}
+
+header, nav{
+   display: flex;
+   flex-direction: row;
+   align-items: center; }
+.header-fixed{ position: fixed; top: 0;}
+
+nav{
+  a{
+    display: inline-block;
+    padding: .8rem; }
+  }
+
+footer{
+     width:100%;
+     margin-top:auto;
+     padding: .5rem; }

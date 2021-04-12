@@ -1,0 +1,603 @@
+/******
+
+ ~> NoobWebKit v1.0
+ ~> Author  : Suyash R.D. (Founder Of GamerNity) 
+ ~> License : MIT
+ ~> Github  : https://github.com/GamerNity/NoobWebKit
+ ~~> Copyright (c) 2021 GamerNity <~~
+
+******/
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  color: #606c76;
+  font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 1.6em;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+}
+
+header, nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header-fixed {
+  position: fixed;
+  top: 0;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0.8rem;
+}
+
+footer {
+  width: 100%;
+  margin-top: auto;
+  padding: 0.5rem;
+}
+
+.button,
+button,
+input[type=button],
+input[type=reset],
+input[type=submit] {
+  outline: none;
+  background-color: #4d65ca;
+  border: 0.1rem solid #4d65ca;
+  border-radius: 0.5rem;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  height: 3.8rem;
+  letter-spacing: 0.1rem;
+  line-height: 3.8rem;
+  padding: 0 3rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.button:hover, .button:focus,
+button:hover,
+button:focus,
+input[type=button]:hover,
+input[type=button]:focus,
+input[type=reset]:hover,
+input[type=reset]:focus,
+input[type=submit]:hover,
+input[type=submit]:focus {
+  background-color: #606c76;
+  border-color: #606c76;
+  color: #fff;
+  outline: 0;
+}
+
+.button[disabled],
+button[disabled],
+input[type=button][disabled],
+input[type=reset][disabled],
+input[type=submit][disabled] {
+  cursor: default;
+  opacity: 0.5;
+}
+.button[disabled]:hover, .button[disabled]:focus,
+button[disabled]:hover,
+button[disabled]:focus,
+input[type=button][disabled]:hover,
+input[type=button][disabled]:focus,
+input[type=reset][disabled]:hover,
+input[type=reset][disabled]:focus,
+input[type=submit][disabled]:hover,
+input[type=submit][disabled]:focus {
+  background-color: #9b4dca;
+  border-color: #9b4dca;
+}
+
+input[type=color],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=url],
+input[type=week],
+input:not([type]),
+textarea,
+select {
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 0.1rem solid #d1d1d1;
+  border-radius: 0.4rem;
+  box-shadow: none;
+  box-sizing: inherit;
+  height: 3.8rem;
+  padding: 0.6rem 1rem 0.7rem;
+  width: 100%;
+}
+input[type=color]:focus,
+input[type=date]:focus,
+input[type=datetime]:focus,
+input[type=datetime-local]:focus,
+input[type=email]:focus,
+input[type=month]:focus,
+input[type=number]:focus,
+input[type=password]:focus,
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type=text]:focus,
+input[type=url]:focus,
+input[type=week]:focus,
+input:not([type]):focus,
+textarea:focus,
+select:focus {
+  border-color: #4d53ca;
+  outline: 0;
+}
+
+select {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" width="30"><path fill="%23d1d1d1" d="M0,0l6,8l6-8"/></svg>') center right no-repeat;
+  padding-right: 3rem;
+}
+select:focus {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 8" width="30"><path fill="blue" d="M0,0l6,8l6-8"/></svg>');
+}
+
+select[multiple] {
+  background: none;
+  height: auto;
+}
+
+textarea {
+  min-height: 6.5rem;
+  resize: none;
+}
+
+label,
+legend {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+fieldset {
+  border-width: 0;
+  padding: 0;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  display: inline;
+}
+
+a {
+  color: #594dca;
+  text-decoration: none;
+}
+a:focus, a:hover {
+  color: #606c76;
+}
+
+dl,
+ol,
+ul {
+  list-style: none;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+dl dl,
+dl ol,
+dl ul,
+ol dl,
+ol ol,
+ol ul,
+ul dl,
+ul ol,
+ul ul {
+  font-size: 90%;
+  margin: 1.5rem 0 1.5rem 3rem;
+}
+
+ol {
+  list-style: decimal inside;
+}
+
+ul {
+  list-style: circle inside;
+}
+
+.button,
+button,
+dd,
+dt,
+li {
+  margin-bottom: 1rem;
+}
+
+fieldset,
+input,
+select,
+textarea {
+  margin-bottom: 1.5rem;
+}
+
+blockquote,
+dl,
+figure,
+form,
+ol,
+p,
+pre,
+table,
+ul {
+  margin-bottom: 2.5rem;
+}
+
+table {
+  border-spacing: 0;
+  display: block;
+  overflow-x: auto;
+  text-align: left;
+  width: 100%;
+}
+
+td,
+th {
+  border-bottom: 0.1rem solid #e1e1e1;
+  padding: 1.2rem 1.5rem;
+}
+
+td:first-child,
+th:first-child {
+  padding-left: 0;
+}
+
+td:last-child,
+th:last-child {
+  padding-right: 0;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+  letter-spacing: -0.1rem;
+  margin-bottom: 2rem;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 4.6rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 3.6rem;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: 2.8rem;
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: 2.2rem;
+  letter-spacing: -0.08rem;
+  line-height: 1.35;
+}
+
+h5 {
+  font-size: 1.8rem;
+  letter-spacing: -0.05rem;
+  line-height: 1.5;
+}
+
+h6 {
+  font-size: 1.6rem;
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+
+img {
+  max-width: 100%;
+}
+
+blockquote {
+  border-left: 0.3rem solid #d1d1d1;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 1rem 1.5rem;
+}
+
+blockquote *:last-child {
+  margin-bottom: 0;
+}
+
+code {
+  background: #f4f5f6;
+  border-radius: 0.4rem;
+  font-size: 86%;
+  margin: 0 0.2rem;
+  padding: 0.2rem 0.5rem;
+  white-space: nowrap;
+}
+
+pre {
+  background: #f4f5f6;
+  border-left: 0.3rem solid #9b4dca;
+  overflow-y: hidden;
+}
+
+pre > code {
+  border-radius: 0;
+  display: block;
+  padding: 1rem 1.5rem;
+  white-space: pre;
+}
+
+hr {
+  border: 0;
+  border-top: 0.1rem solid #f4f5f6;
+  margin: 3rem 0;
+}
+
+.violet {
+  color: violet;
+}
+
+.indigo {
+  color: indigo;
+}
+
+.blue {
+  color: blue;
+}
+
+.green {
+  color: green;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.orange {
+  color: orange;
+}
+
+.red {
+  color: red;
+}
+
+.pink {
+  color: pink;
+}
+
+.white {
+  color: white;
+}
+
+.black {
+  color: black;
+}
+
+.grey {
+  color: grey;
+}
+
+.bg-violet {
+  background-color: violet;
+}
+
+.bg-indigo {
+  background-color: indigo;
+}
+
+.bg-blue {
+  background-color: blue;
+}
+
+.bg-green {
+  background-color: green;
+}
+
+.bg-yellow {
+  background-color: yellow;
+}
+
+.bg-orange {
+  background-color: orange;
+}
+
+.bg-red {
+  background-color: rgba(255, 0, 0, 0.7);
+}
+
+.bg-pink {
+  background-color: pink;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.bg-grey {
+  background-color: grey;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+}
+
+.gap-10 {
+  margin-left: 10%;
+}
+
+.gap-20 {
+  margin-left: 20%;
+}
+
+.gap-25 {
+  margin-left: 25%;
+}
+
+.gap-33, .gap-34 {
+  margin-left: 33.3333%;
+}
+
+.gap-40 {
+  margin-left: 40%;
+}
+
+.gap-50 {
+  margin-left: 50%;
+}
+
+.gap-60 {
+  margin-left: 60%;
+}
+
+.gap-66, .gap-67 {
+  margin-left: 66.6666%;
+}
+
+.gap-75 {
+  margin-left: 75%;
+}
+
+.gap-80 {
+  margin-left: 80%;
+}
+
+.gap-90 {
+  margin-left: 90%;
+}
+
+.w10 {
+  width: 10%;
+}
+
+.w20 {
+  width: 20%;
+}
+
+.w30 {
+  width: 30%;
+}
+
+.w40 {
+  width: 40%;
+}
+
+.w50 {
+  width: 50%;
+}
+
+.w60 {
+  width: 60%;
+}
+
+.w70 {
+  width: 70%;
+}
+
+.w80 {
+  width: 80%;
+}
+
+.w90 {
+  width: 90%;
+}
+
+.w100 {
+  width: 100%;
+}
+
+@keyframes blink {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loader {
+  margin: auto;
+  border: 1.1rem solid rgba(128, 128, 128, 0.2);
+  border-top-color: black;
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  animation: spin 1s linear infinite;
+}
+
+.blink {
+  animation: blink 2s alternate-reverse infinite;
+}
+
+@media (max-width: 200px) {
+  html {
+    font-size: 35%;
+  }
+}
+@media (max-width: 100px) {
+  html {
+    font-size: 10%;
+  }
+}
+
+/*# sourceMappingURL=NoobWebKit.css.map */
